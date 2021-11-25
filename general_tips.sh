@@ -134,6 +134,12 @@ head -n3 /etc/passwd /fakefile 2> /dev/null
 # Discard STDOUT and STDERR
 head -n3 /etc/passwd /fakefile &> /dev/null
 
+## Write multiline string into file using cat
+cat "${INDEX_PATH}" << EOF
+  console.log('Hello world')
+  console.log('Hello world')
+EOF
+
 ######################### Miscelaneous #########################
 ## for loop example
 PORTS="
